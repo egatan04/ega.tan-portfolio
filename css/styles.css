@@ -180,7 +180,8 @@
     vertical-align: middle;
 }footer
 {
-    padding: 50px 0;
+    padding: 50px;
+    background:rgba(255,255,255, 1);
 }.copyright
 {
     padding-top: 20px;
@@ -294,8 +295,8 @@
     max-height: 1080px;
     padding: 15px;
 
-    background: url(../images/lead-bg.jpg);
-    background-size: cover;
+    /* background: url(../images/lead-bg.jpg);
+    background-size: cover; */
 }#lead-content
 {
     position: absolute;
@@ -410,6 +411,9 @@
     padding: 75px 15px;
 
     border-bottom: 1px solid #dcd9d9;
+
+    /*Solid white background*/
+    background:rgba(255,255,255, 1);
 }#about h2
 {
     color: #374054;
@@ -548,6 +552,9 @@
     text-align: center;
 
     border-bottom: 1px solid #dcd9d9;
+
+    /*Solid white background*/
+    background:rgba(255,255,255, 1);
 }#education h2
 {
     margin-bottom: 50px;
@@ -652,6 +659,9 @@
     padding: 50px 15px;
 
     text-align: center;
+
+    /*Solid white background*/
+    background:rgba(255,255,255, 1);
 }#skills h2
 {
     margin-bottom: 50px;
@@ -877,6 +887,7 @@
     }footer
     {
         text-align: center;
+
     }.social
     {
         text-align: center;
@@ -911,7 +922,7 @@
   display: block !important;
 }
 .video-container {
-  position: absolute;
+  position: fixed;
   bottom: 0%;
   left: 0%;
   height: 100%      !important;
@@ -920,6 +931,7 @@
   background: #000;
   margin: 0;
   border: 0;
+  z-index: -100;
 }
 .video-container .poster img {
   width: 100%;
