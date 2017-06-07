@@ -47,9 +47,6 @@
     </header>
     <!-- End header -->
 
-    
-    <!-- End #video-container -->
-
     <div id="lead">
         <video autoplay loop class="bv-video"></video>
         <div id="lead-content">
@@ -268,10 +265,10 @@
             'videos/For_Wes.webm'
           ],
           onReady: function () {
-        // Use onReady() to prevent flickers or force loading state
-        const vidParent = document.querySelector(`.${this.bvVideoWrapClass}`);
-        vidParent.classList.add('bv-video-wrap--ready');
-      }
+            // Use onReady() to prevent flickers or force loading state
+            const vidParent = document.querySelector(`.${this.bvVideoWrapClass}`);
+            vidParent.classList.add('bv-video-wrap--ready');
+          }
         });
     </script>
 
