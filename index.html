@@ -47,18 +47,11 @@
     </header>
     <!-- End header -->
 
-    <div class="video-container">
-        <video autoplay loop class="fillWidth">
-            <source src="videos/For_Wes.mp4" type="video/mp4" />Your browser does not support the video tag. I suggest you upgrade your browser.
-            <source src="videos/For_Wes.webm" type="video/webm" />Your browser does not support the video tag. I suggest you upgrade your browser.
-        </video>
-        <div class="poster hidden">
-            <img src="videos/For_Wes.jpg" alt="">
-        </div>
-    </div>
+    
     <!-- End #video-container -->
 
     <div id="lead">
+        <video autoplay loop class="bv-video"></video>
         <div id="lead-content">
             <img src="images/ET.png" class="center-block img-responsive" alt="ET" width="100" height="100">
             <h1>Ega Tandian</h1>
@@ -267,6 +260,20 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="js/scripts.min.js"></script>
+    <script src="js/backgroundVideo.js"></script>
+    <script type="text/javascript">
+        const backgroundVideo = new BackgroundVideo('.bv-video', {
+          src: [
+            'videos/For_Wes.mp4',
+            'videos/For_Wes.webm'
+          ],
+          onReady: function () {
+        // Use onReady() to prevent flickers or force loading state
+        const vidParent = document.querySelector(`.${this.bvVideoWrapClass}`);
+        vidParent.classList.add('bv-video-wrap--ready');
+      }
+        });
+    </script>
 
 </body>
 
